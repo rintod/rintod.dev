@@ -85,7 +85,7 @@ class iWP_rintodDotDEV:
     def Check(self):
         try:
             r = requests.get(self.url + "/wp-content/uploads/" + self.year + "/" + self.month + "/" + self.shell, verify=False)
-            if r.status_code == 200 and "rintodDotDEV":
+            if r.status_code == 200:
                 return True
             else:
                 return False
